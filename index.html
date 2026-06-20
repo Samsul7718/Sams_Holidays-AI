@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sams_Holidays AI - Premium Agentic Travel Concierge</title>
+    
+    <!-- Meta Descriptions for SEO -->
+    <meta name="description" content="Configure and book your dream vacation with Sams_Holidays AI. Multi-agent AI curators build your personalized, risk-free travel package at the guaranteed best rates.">
+    
+    <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="logo-container">
+            <div class="logo-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+            <div class="logo-text">
+                <h1>Sams_Holidays <span>AI</span></h1>
+                <p>Concierge Agents Network</p>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <a href="#planner" class="active"><i class="fa-solid fa-sliders"></i> Planner</a>
+            <a href="#" id="btn-view-bookings"><i class="fa-solid fa-receipt text-gold"></i> Get Booking Details</a>
+            <a href="#trust"><i class="fa-solid fa-shield-halved"></i> Trust Guarantee</a>
+        </nav>
+        <div class="header-badge">
+            <span class="pulse-green"></span> Live Availability Online
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        
+        <!-- Hero Tagline -->
+        <section class="hero-intro">
+            <span class="sub-badge">AI Agent Concierge System</span>
+            <h2>Craft Your Perfect, Zero-Risk Getaway</h2>
+            <p>Our collaborative AI Agents work in parallel to scan, optimize, and build the ultimate cheap & best couples and family holiday packages with instant previews.</p>
+        </section>
+
+        <!-- Dynamic Grid Section -->
+        <div class="grid-layout">
+            
+            <!-- Left Panel: Input Planner Form -->
+            <section id="planner" class="card form-panel">
+                <div class="card-header">
+                    <h3><i class="fa-solid fa-sliders text-gold"></i> Configure Package Preferences</h3>
+                    <p>Enter your details and let our agent network build your custom package.</p>
+                </div>
+                
+                <form id="travel-form">
+                    <!-- Client Name & Destination -->
+                    <div class="form-row">
+                        <div class="form-group col-6">
+                            <label for="client-name">Client / Couple Name</label>
+                            <div class="input-wrapper">
+                                <i class="fa-regular fa-user"></i>
+                                <input type="text" id="client-name" placeholder="e.g. Alex & Sarah" required>
+                            </div>
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="destination">Destination</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <select id="destination" required>
+                                    <option value="" disabled selected>Select location...</option>
+                                    <option value="bali">Bali, Indonesia (Tropical Romance)</option>
+                                    <option value="maldives">Maldives (Overwater Paradise)</option>
+                                    <option value="swiss">Swiss Alps (Scenic Splendor)</option>
+                                    <option value="santorini">Santorini, Greece (Sunset Bliss)</option>
+                                    <option value="kyoto">Kyoto, Japan (Zen & Tradition)</option>
+                                    <option value="goa">Goa, India (Beach & Sunset Vibes)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Date & Duration -->
+                    <div class="form-row">
+                        <div class="form-group col-6">
+                            <label for="start-date">Start Date</label>
+                            <div class="input-wrapper">
+                                <i class="fa-regular fa-calendar"></i>
+                                <input type="date" id="start-date" required>
+                            </div>
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="duration">Duration (Days / Nights)</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-moon"></i>
+                                <select id="duration" required>
+                                    <option value="3">4 Days / 3 Nights Couple Package</option>
+                                    <option value="5" selected>6 Days / 5 Nights Standard Package</option>
+                                    <option value="7">8 Days / 7 Nights Luxury Escape</option>
+                                    <option value="10">11 Days / 10 Nights Grand Journey</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Guests -->
+                    <div class="form-row">
+                        <div class="form-group col-6">
+                            <label for="adults">Adults (18+)</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-person"></i>
+                                <input type="number" id="adults" min="1" max="10" value="2" required>
+                            </div>
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="children">Children (0-17)</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-child"></i>
+                                <input type="number" id="children" min="0" max="10" value="0">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hotel Star Rating & Transport Type -->
+                    <div class="form-row">
+                        <div class="form-group col-6">
+                            <label for="hotel-stars">Hotel Rating</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-star"></i>
+                                <select id="hotel-stars" required>
+                                    <option value="5">5-Star Luxury Resorts</option>
+                                    <option value="4" selected>4-Star Premium Lodging</option>
+                                    <option value="3">3-Star Boutique/Standard</option>
+                                    <option value="2">2-Star Cozy/Budget</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="transport">Personal Transport</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-car"></i>
+                                <select id="transport" required>
+                                    <option value="luxury-suv">Luxury SUV Chauffeur</option>
+                                    <option value="sedan" selected>Premium Private Sedan</option>
+                                    <option value="convertible">Convertible Roadster (Self-Drive)</option>
+                                    <option value="none">None (Use Hotel Shuttles)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pickup & Drop, Activity Profiles -->
+                    <div class="form-row">
+                        <div class="form-group col-6">
+                            <label for="pickup-drop">Airport Transfer (Pickup/Drop)</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-plane-departure"></i>
+                                <select id="pickup-drop" required>
+                                    <option value="yes" selected>Yes, Airport Pickup & Drop Included</option>
+                                    <option value="no">No, Self-arranged Transfer</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="activity-profile">Primary Trip Mood</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-heart"></i>
+                                <select id="activity-profile" required>
+                                    <option value="romantic" selected>Romantic Couple & Honeymoon</option>
+                                    <option value="adventure">Thrilling Adventure & Exploration</option>
+                                    <option value="relaxation">Wellness & Relaxing Spa Retreat</option>
+                                    <option value="cultural">Heritage & Cultural Immersion</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Optimizer Toggle -->
+                    <div class="form-group toggle-group">
+                        <div class="toggle-text">
+                            <span class="toggle-title">Optimize for "Cheap & Best" Pricing</span>
+                            <span class="toggle-desc">Automatically negotiates bulk rates and searches secret member discounts.</span>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="optimize-price" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="btn-submit">
+                        <span><i class="fa-solid fa-gears"></i> Deploy AI Agents Network</span>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Right Panel: AI Orchestration Console -->
+            <section class="console-panel flex-column">
+                
+                <!-- Agent Dashboard -->
+                <div class="card agent-card">
+                    <div class="card-header">
+                        <h3><i class="fa-solid fa-network-wired text-cyan"></i> Agent Status Hub</h3>
+                        <p>Track the collaborative decision processes of our travel agents.</p>
+                    </div>
+                    
+                    <div class="agents-grid">
+                        <div class="agent-node" id="node-hotel">
+                            <div class="agent-avatar"><i class="fa-solid fa-hotel"></i></div>
+                            <div class="agent-info">
+                                <h4>Hotel Curator</h4>
+                                <span class="status-badge status-idle">Idle</span>
+                            </div>
+                        </div>
+                        
+                        <div class="agent-node" id="node-gastronomy">
+                            <div class="agent-avatar"><i class="fa-solid fa-utensils"></i></div>
+                            <div class="agent-info">
+                                <h4>Food & Dining</h4>
+                                <span class="status-badge status-idle">Idle</span>
+                            </div>
+                        </div>
+                        
+                        <div class="agent-node" id="node-adventure">
+                            <div class="agent-avatar"><i class="fa-solid fa-mountain"></i></div>
+                            <div class="agent-info">
+                                <h4>Activity Specialist</h4>
+                                <span class="status-badge status-idle">Idle</span>
+                            </div>
+                        </div>
+                        
+                        <div class="agent-node" id="node-logistics">
+                            <div class="agent-avatar"><i class="fa-solid fa-route"></i></div>
+                            <div class="agent-info">
+                                <h4>Logistics & Drive</h4>
+                                <span class="status-badge status-idle">Idle</span>
+                            </div>
+                        </div>
+                        
+                        <div class="agent-node" id="node-finance">
+                            <div class="agent-avatar"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                            <div class="agent-info">
+                                <h4>Finance Optimizer</h4>
+                                <span class="status-badge status-idle">Idle</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agent Terminal Stream -->
+                <div class="card terminal-card flex-grow">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="terminal-title">sams_holidays_agent_network.sh</div>
+                    </div>
+                    <div class="terminal-body" id="agent-log">
+                        <div class="log-line text-muted">System ready. Configure your preferences and click "Deploy AI Agents Network" to begin the package design.</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Section: Dynamic Generated Travel Package (Hidden Initially) -->
+        <section id="itinerary-section" class="itinerary-wrapper card" style="display: none;">
+            <div class="itinerary-banner" id="itinerary-banner-img">
+                <div class="banner-overlay"></div>
+                <div class="banner-content">
+                    <span id="itinerary-badge" class="badge-accent">✨ AI Optimized Package</span>
+                    <h2 id="itinerary-heading-title">Scenic Splendor Swiss Alps Package</h2>
+                    <p id="itinerary-client-desc">Customized for <strong>Alex & Sarah</strong> • 5 Nights • Private Transport</p>
+                </div>
+            </div>
+
+            <!-- Package Key Features Overview -->
+            <div class="package-meta-badges">
+                <div class="meta-badge">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <span>Location</span>
+                        <strong id="meta-location">Swiss Alps</strong>
+                    </div>
+                </div>
+                <div class="meta-badge">
+                    <i class="fa-solid fa-moon"></i>
+                    <div>
+                        <span>Duration</span>
+                        <strong id="meta-duration">5 Nights</strong>
+                    </div>
+                </div>
+                <div class="meta-badge">
+                    <i class="fa-solid fa-users"></i>
+                    <div>
+                        <span>Travelers</span>
+                        <strong id="meta-travelers">2 Adults</strong>
+                    </div>
+                </div>
+                <div class="meta-badge">
+                    <i class="fa-solid fa-star"></i>
+                    <div>
+                        <span>Hotel Tier</span>
+                        <strong id="meta-stars">4-Star Premium</strong>
+                    </div>
+                </div>
+                <div class="meta-badge">
+                    <i class="fa-solid fa-car-side"></i>
+                    <div>
+                        <span>Transport</span>
+                        <strong id="meta-transport">Private Sedan</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabbed Itinerary & Visual Galleries -->
+            <div class="itinerary-grid">
+                <!-- Left: Detailed Day Plan -->
+                <div class="itinerary-timeline">
+                    <h3 class="section-title"><i class="fa-solid fa-calendar-days text-gold"></i> Curated Day-by-Day Experience</h3>
+                    
+                    <div class="timeline-container" id="timeline-container">
+                        <!-- Dynamically filled by JS -->
+                    </div>
+                </div>
+
+                <!-- Right: Visual Cards (Hotel View, Food Spots, Romantic Drive) -->
+                <div class="itinerary-assets">
+                    
+                    <!-- Hotel Highlight -->
+                    <div class="detail-card">
+                        <h4 class="card-sub-title"><i class="fa-solid fa-hotel text-cyan"></i> Accomodation View</h4>
+                        <div class="image-gallery-container">
+                            <img id="hotel-gallery-img" src="" alt="Hotel View">
+                            <div class="img-caption" id="hotel-gallery-caption">The Omnia Luxury Lodge - Caldera/Mountain View</div>
+                        </div>
+                        <div class="detail-info-box">
+                            <h5 id="hotel-name">The Omnia Swiss Chalet</h5>
+                            <p id="hotel-desc">Lush cliffside hotel facing Matterhorn peaks, equipped with high-end spa, outdoor heated infinity baths, and modern fine-dining.</p>
+                            <ul class="amenity-list" id="hotel-amenities">
+                                <!-- Filled by JS -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Food Highlight -->
+                    <div class="detail-card">
+                        <h4 class="card-sub-title"><i class="fa-solid fa-utensils text-gold"></i> Gastronomy Spotlight</h4>
+                        <div class="image-gallery-container">
+                            <img id="food-gallery-img" src="" alt="Food View">
+                            <div class="img-caption" id="food-gallery-caption">Seafood candlelight grill table - Fresh Catch</div>
+                        </div>
+                        <div class="detail-info-box">
+                            <h5 id="food-name">Local Dining spots</h5>
+                            <p id="food-desc">A culinary trip curated by our food agent, featuring authentic dining settings and must-try local specialties.</p>
+                        </div>
+                    </div>
+
+                    <!-- Romantic Drive Highlight -->
+                    <div class="detail-card drive-card">
+                        <h4 class="card-sub-title"><i class="fa-solid fa-road text-magenta"></i> Featured Scenic Drive</h4>
+                        <div class="drive-content">
+                            <div class="drive-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                            <div class="drive-text">
+                                <h5 id="drive-title">Sunset Scenic Route</h5>
+                                <p id="drive-desc">Enjoy a slow drive through scenic winding trails, looking out over beautiful ocean vistas or mountain ranges.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Price & Trust Badges -->
+                    <div class="detail-card price-checkout-card">
+                        <div class="price-breakdown">
+                            <h4>Pricing Summary</h4>
+                            <div class="price-line">
+                                <span>Accommodation Booking</span>
+                                <span id="price-hotel">$0.00</span>
+                            </div>
+                            <div class="price-line">
+                                <span>Private Transport & Chauffeur</span>
+                                <span id="price-transport">$0.00</span>
+                            </div>
+                            <div class="price-line">
+                                <span>Curated Experiences & Dining</span>
+                                <span id="price-activities">$0.00</span>
+                            </div>
+                            <div class="price-line">
+                                <span>Local Fees & Taxes</span>
+                                <span id="price-taxes">$0.00</span>
+                            </div>
+                            
+                            <hr class="price-divider">
+                            
+                            <div class="price-line original-price-row" id="original-price-container">
+                                <span>Standard Market Price:</span>
+                                <span class="strikethrough" id="price-original">$0.00</span>
+                            </div>
+                            <div class="price-line total-price-row">
+                                <span class="total-label">AI Optimized Rate:</span>
+                                <span class="total-val" id="price-total">$0.00</span>
+                            </div>
+                            <div class="saving-alert" id="saving-alert">
+                                <i class="fa-solid fa-circle-check"></i> Cheap & Best Match: You saved <span>$0.00</span>!
+                            </div>
+                        </div>
+
+                        <!-- 0 Risk & Trust Badges -->
+                        <div class="trust-container">
+                            <h5><i class="fa-solid fa-shield-halved text-green"></i> 0-Risk Booking Trust Guarantee</h5>
+                            <div class="trust-badges-grid">
+                                <div class="trust-badge">
+                                    <i class="fa-solid fa-calendar-xmark text-green"></i>
+                                    <div>
+                                        <strong>Free Cancellation</strong>
+                                        <span>Cancel up to 24h prior</span>
+                                    </div>
+                                </div>
+                                <div class="trust-badge">
+                                    <i class="fa-solid fa-piggy-bank text-green"></i>
+                                    <div>
+                                        <strong>Cheap & Best Price</strong>
+                                        <span>Direct wholesale rate</span>
+                                    </div>
+                                </div>
+                                <div class="trust-badge">
+                                    <i class="fa-solid fa-handshake-angle text-green"></i>
+                                    <div>
+                                        <strong>Zero Booking Risk</strong>
+                                        <span>Pay upon arrival option</span>
+                                    </div>
+                                </div>
+                                <div class="trust-badge">
+                                    <i class="fa-solid fa-circle-phone text-green"></i>
+                                    <div>
+                                        <strong>24/7 Agent Support</strong>
+                                        <span>Live assistant via chat</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="action-buttons">
+                            <button class="btn btn-secondary" onclick="window.print()">
+                                <i class="fa-solid fa-print"></i> Export / Print Itinerary
+                            </button>
+                            <button class="btn btn-primary" id="btn-book-now">
+                                <i class="fa-solid fa-credit-card"></i> Lock Price & Book Now
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Modal: Booking Success -->
+        <div id="booking-modal" class="modal">
+            <div class="modal-content card">
+                <span class="close-btn" id="close-modal">&times;</span>
+                <div class="modal-body text-center">
+                    <div class="success-icon"><i class="fa-solid fa-circle-check text-green"></i></div>
+                    <h2>Booking Request Confirmed!</h2>
+                    <p>Thank you <strong id="modal-client-name">Guest</strong>, your travel itinerary has been locked at the guaranteed AI price of <strong id="modal-price" class="text-gold">$0.00</strong>.</p>
+                    <p class="text-muted">A Sams_Holidays agent will text/email you within 15 minutes to coordinate transfers and confirm flight ticket attachments.</p>
+                    
+                    <div class="voucher-box">
+                        <span class="voucher-title">Temporary Voucher ID</span>
+                        <strong class="voucher-code" id="voucher-code">SH-9830219-X</strong>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button class="btn btn-primary" id="btn-modal-close">Confirm & Return Home</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dynamic Modal: Manage Bookings -->
+        <div id="bookings-list-modal" class="modal">
+            <div class="modal-content card" style="max-width: 750px;">
+                <span class="close-btn" id="close-bookings-modal">&times;</span>
+                <div class="modal-body">
+                    <h2 class="playfair" style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-receipt text-gold"></i> Saved Booking Details
+                    </h2>
+                    <p class="text-secondary" style="margin-bottom: 20px; font-size: 0.9rem;">
+                        View details or manage reservations secured under the Sams_Holidays trust guarantee.
+                    </p>
+                    
+                    <div id="bookings-table-container">
+                        <!-- Content injected via JS -->
+                    </div>
+                    
+                    <div class="modal-actions text-center" style="margin-top: 25px;">
+                        <button class="btn btn-secondary" id="btn-close-bookings-modal" style="width: auto; padding: 10px 24px;">Close Panel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Sams_Holidays AI Travel Agent Concierge. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#trust">Privacy Policy</a>
+                <a href="#trust">Terms of Service</a>
+                <a href="#trust">Contact support@samsholidays.example.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- App Script -->
+    <script src="app.js"></script>
+</body>
+</html>
