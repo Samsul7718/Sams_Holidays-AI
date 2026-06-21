@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-green.svg)](https://samsul7718.github.io/Sams_Holidays-AI/)
+[![Cloud Run](https://img.shields.io/badge/Deploy-Google%20Cloud%20Run-4285F4?logo=google-cloud&logoColor=white)](https://sams-holidays-ai-691977289511.us-central1.run.app)
 
 ![Sams_Holidays AI Dashboard](dashboard_screenshot.png)
 
@@ -77,6 +78,9 @@ No build process or installation is required. Since this is a static site:
 
 ---
 
-## 🌐 Live Deployment
-This project is configured to run on **GitHub Pages**. Once pushed to the repository, the project is live and instantly accessible at:
-👉 **[Sams_Holidays AI Web App](https://samsul7718.github.io/Sams_Holidays-AI/)**
+## 🌐 Live Deployments
+
+| Platform | URL | Status |
+|---|---|---|
+| **Google Cloud Run** | [https://sams-holidays-ai-691977289511.us-central1.run.app](https://sams-holidays-ai-691977289511.us-central1.run.app) | ✅ Live |
+| **GitHub Pages** | [https://samsul7718.github.io/Sams_Holidays-AI/](https://samsul7718.github.io/Sams_Holidays-AI/) | ✅ Live |
