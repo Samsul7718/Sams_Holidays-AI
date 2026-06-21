@@ -3,6 +3,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-green.svg)](https://samsul7718.github.io/Sams_Holidays-AI/)
 
+![Sams_Holidays AI Dashboard](dashboard_screenshot.png)
+
 **Sams_Holidays AI** is a premium, client-facing agentic travel concierge web application. It orchestrates a collaborative network of five dedicated AI agents to design, optimize, and finalize custom, risk-free couple and family vacation packages at wholesale rates with instant booking capabilities.
 
 ---
